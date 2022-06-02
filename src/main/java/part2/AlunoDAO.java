@@ -101,4 +101,24 @@ public class AlunoDAO {
         }
 
     }
+
+    public void update(Aluno aluno) {
+
+        try (Connection conn = ConnectionFactory.getConnection()){
+            String sql = "UPDATE aluno SET nome = ?, idade = ?, estado = ? WHERE id = ?";
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1,aluno.getNome());
+            stmt.setInt(2, aluno.getIdade());
+            stmt.setString(3, aluno.getEstado());
+            stmt.setInt(4,aluno.getId());
+
+            int rowsAffected = stmt.executeUpdate();
+            System.out.println("Update realizado com sucesso");
+        }catch (SQLException e){
+            System.out.println("Update falhou");
+            e.printStackTrace();
+        }
+
+    }
 }

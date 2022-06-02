@@ -26,7 +26,16 @@ public class QueriesExecution {
         );
 //        alunoDAO.create(alunoParaInsercao); //Comentado to stop adding
 
+//        Delete:
 //        alunoDAO.delete(5); // Comentado para parar delete
+
+//        Update:
+        Aluno alunoParaAtualizar = alunoDAO.getById(3);
+        alunoParaAtualizar.setNome("Joaquim");
+        alunoParaAtualizar.setIdade(18);
+        alunoParaAtualizar.setEstado("RS");
+
+//        alunoDAO.update(alunoParaAtualizar); //comentado para parar o update
 
     }
 }
