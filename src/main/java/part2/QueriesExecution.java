@@ -18,6 +18,14 @@ public class QueriesExecution {
         System.out.println("Retorno da consulta por ID:");
         System.out.println(alunoParaConsulta);
 
+        //Insert:
+        Aluno alunoParaInsercao = new Aluno(
+                "Matheus",
+                43,
+                "SP"
+        );
+        alunoDAO.create(alunoParaInsercao);
+
 
 
     }

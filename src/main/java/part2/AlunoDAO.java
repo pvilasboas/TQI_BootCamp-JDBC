@@ -66,4 +66,21 @@ public class AlunoDAO {
         return alunos;
     }
 
+    public void create(Aluno aluno) {
+        try (Connection conn = ConnectionFactory.getConnection()){
+            String sql = "INSERT INTO aluno(nome, idade, estado) VALUES(?,?,?)";
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, aluno.getNome());
+            stmt.setInt(2, aluno.getIdade());
+            stmt.setString(3, aluno.getEstado());
+
+            int rowsAffected = stmt.executeUpdate();
+
+            System.out.println("Insercão realizada com sucesso");
+        } catch (SQLException e){
+            System.out.println("Insercao falhou");
+            e.printStackTrace();
+        }
+    }
 }
