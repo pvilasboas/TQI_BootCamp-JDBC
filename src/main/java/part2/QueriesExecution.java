@@ -24,9 +24,9 @@ public class QueriesExecution {
                 43,
                 "SP"
         );
-        alunoDAO.create(alunoParaInsercao);
+//        alunoDAO.create(alunoParaInsercao); //Comentado to stop adding
 
-
+//        alunoDAO.delete(5); // Comentado para parar delete
 
     }
 }
