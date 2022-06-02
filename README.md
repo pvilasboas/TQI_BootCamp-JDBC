@@ -11,4 +11,4 @@ Part 1: conencting with mysql-server
 
 Part 2: CRUDE de Aluno usando principio solid e padrão de projeto factory-method
 
-Part2: CRUDE of Aluno utilizing solid principles and factory-method project pattern
+Part2: CRUDE of Aluno using solid principles and factory-method project pattern
