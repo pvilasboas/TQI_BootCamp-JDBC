@@ -17,9 +17,10 @@ public class ConnectionFactory{
 
         Connection connection = null;
 
-        try (InputStream input = ConnectionFactory.class.getClassLoader()
-                .getResourceAsStream("connection.properties")) {
+        try (InputStream input = ConnectionFactory.class.getClassLoader().getResourceAsStream("connection.properties"))
+        {
             Properties prop = new Properties();
+
             prop.load(input);
 
             String driver = prop.getProperty("jdbc.driver");
